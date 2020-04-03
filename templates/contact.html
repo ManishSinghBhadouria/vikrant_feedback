@@ -11,14 +11,80 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Academy - Education Course Template</title>
+    <title>Contact Us | Vikrant</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+    <link rel="icon" href="{% static 'img/core-img/fav.png' %}">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
 </head>
 
 <body>
@@ -40,7 +106,8 @@
                                 <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
                             </div>
                             <div class="login-content">
-                                <a href="#">Register / Login</a>
+                                <a href="{% url 'login' %}"><button class="button button2"><b>Log-In</b></button></a>
+                                <a href="{% url 'register' %}"><button class="button button2"><b>Register</b></button></a>
                             </div>
                         </div>
                     </div>
@@ -71,20 +138,10 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="{% url 'index' %}">Home</a></li>
-                                            <li><a href="{% url 'about' %}">About Us</a></li>
-                                            <li><a href="{% url 'course' %}">Course</a></li>
-                                            <li><a href="{% url 'contact' %}">Contact</a></li>
-                                            <li><a href="{% url 'element' %}">Elements</a></li>
-                                        </ul>
-                                    </li>
-
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'course' %}">Our Courses</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     <li><a href="{% url 'about' %}">About Us</a></li>
-                                    <li><a href="{% url 'course' %}">Course</a></li>
-                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -93,7 +150,7 @@
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(+65) 456 332 5568 889</span></a>
+                                <a href="tel:18002705155"><i class="icon-telephone-2"></i> <span>18002705155</span></a>
                             </div>
                         </div>
                     </nav>
@@ -106,13 +163,13 @@
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img" style="background-image: url({% static 'img/bg-img/breadcumb.jpg' %});">
         <div class="bradcumbContent">
-            <h2>Contact</h2>
+            <h2>Contact Us</h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Google Maps ##### -->
-    <div class="map-area wow fadeInUp" data-wow-delay="300ms">
+    <div class="map-area wow fadeInUp" data-wow-delay="200ms">
         <div id="googleMap"></div>
     </div>
 
@@ -129,7 +186,7 @@
                                     <div class="section-heading text-left">
                                         <span>The Best</span>
                                         <h3>Contact Us</h3>
-                                        <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris.</p>
+                                        <p class="mt-30">Vikrant Educational and Social Welfare Society has established a group of Institutions to embark on a noble mission to spread education in the Society and there by contribute to the progress and prosperity of India.</p>
                                     </div>
 
                                     <!-- Contact Social Info -->
@@ -147,7 +204,7 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-placeholder"></i>
                                         </div>
-                                        <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                                        <p>Near Chitora Road,Ratwai,Badagaon,Gwalior,Madhya Pradesh,474006</p>
                                     </div>
 
                                     <!-- Single Contact Info -->
@@ -155,7 +212,7 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-telephone-1"></i>
                                         </div>
-                                        <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
+                                        <p>Main: 180027055155 <br> Office: 1800-270-5155</p>
                                     </div>
 
                                     <!-- Single Contact Info -->
@@ -163,17 +220,19 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-contract"></i>
                                         </div>
-                                        <p>office@yourbusiness.com</p>
+                                        <p>Info@vitm.edu.in</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Contact Form Area -->
                             <div class="col-12 col-lg-7">
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                    <form action="#" method="post">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    <form action="{% url 'contact' %}" method="post">
+                                     {% csrf_token %} 
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                                        <input type="number" class="form-control" id="email" name="mobile" placeholder="Mobile Number">
+                                        <textarea name="msg" class="form-control" id="message" cols="30" rows="10" placeholder="Message ?"></textarea>
                                         <button class="btn academy-btn mt-30" type="submit">Contact Us</button>
                                     </form>
                                 </div>
@@ -197,7 +256,7 @@
                             <div class="widget-title">
                                 <a href="#"><img src="{% static 'img/core-img/logo2.png' %}" alt=""></a>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
+                            <p>Vikrant Educational and Social Welfare Society has established a group of Institutions to embark on a noble mission to spread education in the Society and there by contribute to the progress and prosperity of India.</p>
                             <div class="footer-social-info">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -215,10 +274,10 @@
                             </div>
                             <nav>
                                 <ul class="useful-links">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Services &amp; Features</a></li>
-                                    <li><a href="#">Accordions and tabs</a></li>
-                                    <li><a href="#">Menu ideas</a></li>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'course' %}">Our &amp; Courses</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -227,16 +286,9 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <h6>Gallery</h6>
+                                
                             </div>
-                            <div class="gallery-list d-flex justify-content-between flex-wrap">
-                                <a href="{% static 'img/bg-img/gallery1.jpg' %}" class="gallery-img" title="Gallery Image 1"><img src="{% static 'img/bg-img/gallery1.jpg' %}" alt=""></a>
-                                <a href="{% static 'img/bg-img/gallery2.jpg' %}" class="gallery-img" title="Gallery Image 2"><img src="{% static 'img/bg-img/gallery2.jpg' %}" alt=""></a>
-                                <a href="{% static 'img/bg-img/gallery3.jpg' %}" class="gallery-img" title="Gallery Image 3"><img src="{% static 'img/bg-img/gallery3.jpg' %}" alt=""></a>
-                                <a href="{% static 'img/bg-img/gallery4.jpg' %}" class="gallery-img" title="Gallery Image 3"><img src="{% static 'img/bg-img/gallery4.jpg' %}" alt=""></a>
-                                <a href="{% static 'img/bg-img/gallery5.jpg' %}" class="gallery-img" title="Gallery Image 5"><img src="{% static 'img/bg-img/gallery5.jpg' %}" alt=""></a>
-                                <a href="{% static 'img/bg-img/gallery6.jpg' %}" class="gallery-img" title="Gallery Image 6"><img src="{% static 'img/bg-img/gallery6.jpg' %}" alt=""></a>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Footer Widget Area -->
@@ -247,15 +299,15 @@
                             </div>
                             <div class="single-contact d-flex mb-30">
                                 <i class="icon-placeholder"></i>
-                                <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
+                                <p>Near Chitora Road,Ratwai,Badagaon,Gwalior,Madhya Pradesh,474006</p>
                             </div>
                             <div class="single-contact d-flex mb-30">
                                 <i class="icon-telephone-1"></i>
-                                <p>Main: 203-808-8613 <br>Office: 203-808-8648</p>
+                                <p>Main: 180027055155 <br>Office: 180027055155</p>
                             </div>
                             <div class="single-contact d-flex">
                                 <i class="icon-contract"></i>
-                                <p>office@yourbusiness.com</p>
+                                <p>Info@vitm.edu.in</p>
                             </div>
                         </div>
                     </div>
