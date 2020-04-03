@@ -106,7 +106,11 @@ def facupdateprofile(request):
             spec = request.POST['spec']
             email = request.POST['email']
             branch = request.POST['branch']
+<<<<<<< HEAD
             if facprofile.objects.filter(email=email).update(phone=phone,branch=branch,add=add,spec=spec):
+=======
+            if facprofile.objects.filter(email=email).update(name=name,phone=phone,branch=branch,add=add,spec=spec):
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                 messages.info(request, 'Profile Updated Successfully !!!!')
                 return redirect('login')
             else:
@@ -184,7 +188,11 @@ def stdupdateprofile(request):
             branch = request.POST['branch']
             sem = request.POST['sem']
             email = request.POST['email']
+<<<<<<< HEAD
             if stdprofile.objects.filter(email=email).update(name=name,fname=fname,phone=phone):
+=======
+            if stdprofile.objects.filter(email=email).update(name=name,fname=fname,roll=roll,phone=phone):
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                 messages.info(request, 'Profile Updated Successfully !!!!')
                 return redirect('login')
             else:
@@ -399,6 +407,7 @@ def viewfac(request):
 def viewstd(request):
     if request.session.has_key('a_logged'):
         email = request.session.get('a_logged')
+<<<<<<< HEAD
         info = registration.objects.get(email=email)
         if request.method == "POST":
             programme = request.POST['programme']
@@ -408,6 +417,11 @@ def viewstd(request):
             return render(request, 'viewstd.html',{'user':info,'allrecord': allrecord})
         else:
             return render(request, 'adminselectstdfeed.html',{'user':info})
+=======
+        allrecord = stdprofile.objects.all()
+        info = registration.objects.get(email=email)
+        return render(request, 'viewstd.html',{'user':info,'allrecord': allrecord})
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
     else:
         return  redirect ('login')
 
@@ -513,10 +527,16 @@ def contact(request):
         email1='manishsinghbhadouria34@gmail.com'
         name = request.POST['name']
         msg = request.POST['msg']
+<<<<<<< HEAD
         mobile = request.POST['mobile']
         body='Name = ' + str(name) + '\n' +'Mobile Number = ' + str(mobile) + '\n' + 'Email = ' + str(email) +  '\n' + 'Message = ' + str(msg) + '..' 
         subject='VIKRANT GROUP OF INSTITUTIONS'
         bod='Thank You For Contacting Vikrant Group Of Institutions We Will Get in Touch With You Shortly--'
+=======
+        body='Name = ' + str(name) + 'Message = ' + str(msg) + 'Email = ' + str(email)
+        subject='VIKRANT GROUP OF INSTITUTIONS'
+        bod='Thank You For Contacting We Will Get in Touch With You Shortly--'
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
         send_mail(subject,bod,'manishsinghbhadouria34@gmail.com',[email],fail_silently=False)
         send_mail(subject,body,'manishsinghbhadouria34@gmail.com',[email1],fail_silently=False)
         return redirect('index')
@@ -578,7 +598,10 @@ def register(request):
             return redirect('register')
     else:
         return render(request,'register.html')
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
 def generate(n):
     range_start = 10**(n-1)
@@ -607,6 +630,36 @@ def validate(request):
     else:
         return render(request,'password.html')
 
+<<<<<<< HEAD
+def generate(n):
+    range_start = 10**(n-1)
+    range_end = (10**n)-1
+    return randint(range_start, range_end)
+
+#ONE TIME PASSWORD
+def validate(request):
+    if request.method == 'POST':
+        code = request.POST['code']
+        email = request.POST['email']
+        pwd = request.POST['pwd']
+        otp = request.POST['otp']
+        totp = request.POST['totp']
+        if otp==totp:
+            if registration.objects.filter(email=email).exists():
+                    messages.info(request, 'Email Already Exist !!!!')
+                    return redirect('register')
+            user = registration(code=code,email=email, pwd=pwd)
+            user.save()
+            messages.info(request, 'Registered Successfully Login To Continue !!!!')
+            return redirect('login')
+        else:
+            messages.info(request, 'OTP Is Not Correct !!!!')
+            return redirect('validate')
+    else:
+        return render(request,'password.html')
+
+=======
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 # LOGIN
 def login(request):
     if request.session.has_key('std_logged'):
@@ -729,26 +782,42 @@ def recovery(request):
 def stddelete(request,id):
     print(id)
     stdprofile.objects.filter(id=id).delete()
+<<<<<<< HEAD
     return redirect("login")
+=======
+    return redirect("viewstd")
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
 
 
 def almtdelete(request,id):
     print(id)
     subjectallotment.objects.filter(id=id).delete()
+<<<<<<< HEAD
     return redirect("login")
+=======
+    return redirect("viewalmt")
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
 
 
 def facdelete(request,id):
     print(id)
     facprofile.objects.filter(id=id).delete()
+<<<<<<< HEAD
     return redirect("login")
+=======
+    return redirect("viewfac")
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
 
 
 def subdelete(request,id):
     print(id)
     subject.objects.filter(id=id).delete()
+<<<<<<< HEAD
     return redirect("login")
+=======
+    return redirect("viewsub")
+>>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
