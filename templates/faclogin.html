@@ -12,7 +12,7 @@
 
     <!-- Title Page-->
     <title>Faculty | Dashboard</title>
-
+<link rel="icon" href="{% static 'img/core-img/fav.png' %}">
     <!-- Fontfaces CSS-->
     <link href="{% static 'css/font-face.css' %}" rel="stylesheet" media="all">
     <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
@@ -34,20 +34,6 @@
     <!-- Main CSS-->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet" media="all">
 
-<<<<<<< HEAD
-=======
-
-    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
-<link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-
-<link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
-<link href="{% static 'vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
-
-<link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 </head>
 
 <body class="animsition">
@@ -81,15 +67,9 @@
                         </li>
                         <li>
                             <a href="{% url 'uploadnotes' %}">
-<<<<<<< HEAD
                                 <i class="fa fa-upload"></i>Upload Notes</a>
                         </li>
                         
-=======
-                                <i class="fas fa-table"></i>Upload Notes</a>
-                        </li>
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                     </ul>
                 </div>
             </nav>
@@ -116,15 +96,9 @@
                         </li>
                         <li>
                             <a href="{% url 'uploadnotes' %}">
-<<<<<<< HEAD
                                 <i class="fa fa-upload"></i>Upload Notes</a>
                         </li>
                         
-=======
-                                <i class="fas fa-table"></i>Upload Notes</a>
-                        </li>
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                     </ul>
                 </nav>
             </div>
@@ -144,14 +118,11 @@
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
                             </form>
-<<<<<<< HEAD
 {% if user.code %}
 <center><h4 style="color:red;">Please Update Your Profile</h4>
 <br>
 <h6 style="color:red;">Notice : Profile Name Will We Updated Only Once</h6></center>
 {% endif %}
-=======
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
@@ -264,11 +235,7 @@
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
                                 </div>            
-=======
-                                </div>
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -299,11 +266,7 @@
                                                     </h5>
                                         {% endif %}
 
-<<<<<<< HEAD
                                                     
-=======
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                                     <span class="email">{{user.email}}</span>
                                                 </div>
                                             </div>
@@ -331,15 +294,10 @@
             </header>
             <!-- HEADER DESKTOP-->
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-<<<<<<< HEAD
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
@@ -350,21 +308,6 @@
                         </div>
                           </div>
                         <div class="row m-t-25">
-=======
-
-
-<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-        <div class="wrapper wrapper--w790">
-            <div class="card card-5">
-                <div class="card-heading">
-                    <h2 class="title">Subjects</h2>
-                </div>
-                <br>
-                <br>
-
-
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 {% for subject in facsub %}
 
                             <div class="col-sm-6 col-lg-3">
@@ -376,11 +319,7 @@
                                             </div>
                                             <div class="text">
                                                 <h2>{{subject}}</h2>
-<<<<<<< HEAD
                                                 
-=======
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -399,7 +338,6 @@
     <br>
     {% endfor %}
 </div>
-<<<<<<< HEAD
                   
                         <div class="row">
                             <div class="col-md-12">
@@ -408,20 +346,6 @@
                         </div>
                     </div>
                 </div>
-=======
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
@@ -447,32 +371,8 @@
     <script src="{% static 'vendor/circle-progress/circle-progress.min.js' %}"></script>
     <script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
     <script src="{% static 'vendor/chartjs/Chart.bundle.min.js' %}"></script>
-<<<<<<< HEAD
     <script src="{% static 'vendor/select2/select2.min.js' %}">
     </script>
-=======
-    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
-
-
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-
-<script src="{% static 'vendor/select2/select2.min.js' %}" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-<script src="{% static 'vendor/datepicker/moment.min.js' %}" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-<script src="{% static 'vendor/datepicker/daterangepicker.js' %}" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-
-<script src="{% static 'js/global.js' %}" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="fd5bfc2506e31fdc2e8f6eb0-text/javascript"></script>
-<script type="{% static 'fd5bfc2506e31fdc2e8f6eb0-text/javascript' %}">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script src="{% static 'https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js' %}" data-cf-settings="fd5bfc2506e31fdc2e8f6eb0-|49" defer=""></script>
-
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
     <!-- Main JS-->
     <script src="{% static 'js/main.js' %}"></script>

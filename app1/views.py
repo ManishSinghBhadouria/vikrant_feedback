@@ -510,15 +510,15 @@ def element(request):
 def contact(request):
     if request.method == 'POST':
         email = request.POST['email']
-        email1='manishsinghbhadouria34@gmail.com'
+        email1='vikrantgroupofinstitutionsgwal@gmail.com'
         name = request.POST['name']
         msg = request.POST['msg']
         mobile = request.POST['mobile']
         body='Name = ' + str(name) + '\n' +'Mobile Number = ' + str(mobile) + '\n' + 'Email = ' + str(email) +  '\n' + 'Message = ' + str(msg) + '..' 
         subject='VIKRANT GROUP OF INSTITUTIONS'
         bod='Thank You For Contacting Vikrant Group Of Institutions We Will Get in Touch With You Shortly--'
-        send_mail(subject,bod,'manishsinghbhadouria34@gmail.com',[email],fail_silently=False)
-        send_mail(subject,body,'manishsinghbhadouria34@gmail.com',[email1],fail_silently=False)
+        send_mail(subject,bod,'vikrantgroupofinstitutionsgwal@gmail.com',[email],fail_silently=False)
+        send_mail(subject,body,'vikrantgroupofinstitutionsgwal@gmail.com',[email1],fail_silently=False)
         return redirect('index')
     else:
         return  render (request,'contact.html')
@@ -568,7 +568,7 @@ def register(request):
                     messages.info(request, 'Email Already Exist !!!!')
                     return redirect('register')
                 else:
-                    send_mail(subject,body,'manishsinghbhadouria34@gmail.com',[email],fail_silently=False)
+                    send_mail(subject,body,'vikrantgroupofinstitutionsgwal@gmail.com',[email],fail_silently=False)
                     return render(request,'password.html',context)
             else:
                 messages.info(request, 'Both Passwords Are Not Same !!!!')
@@ -740,7 +740,7 @@ def recovery(request):
             subject='VIKRANT GROUP OF INSTITUTIONS'
             bod='Your Password For Login In VIKRANT FEEDBACK SYSTEM Is--'
             body= bod + str(info.pwd)
-            send_mail(subject,body,'manishsinghbhadouria34@gmail.com',[email],fail_silently=False)
+            send_mail(subject,body,'vikrantgroupofinstitutionsgwal@gmail.com',[email],fail_silently=False)
             messages.info(request, 'Password Is Sent To Your Registered E-Mail Id !!!!')
             return redirect('login')
         else:

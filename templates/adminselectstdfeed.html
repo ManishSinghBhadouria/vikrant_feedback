@@ -11,8 +11,8 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Faculty | Dashboard</title>
-
+    <title>Admin | Dashboard</title>
+<link rel="icon" href="{% static 'img/core-img/fav.png' %}">
     <!-- Fontfaces CSS-->
     <link href="{% static 'css/font-face.css' %}" rel="stylesheet" media="all">
     <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
@@ -33,7 +33,6 @@
 
     <!-- Main CSS-->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet" media="all">
-
 <script>
 var stateObject = {
 "Engineering": { "CSE": ["1", "2", "3", "4", "5", "6", "7", "8"],
@@ -333,6 +332,7 @@ body {
   padding: 3rem;
 }
 </style>
+
 </head>
 
 <body class="animsition">
@@ -361,14 +361,55 @@ body {
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{% url 'faclogin' %}">
-                                <i class="fas fa-chart-bar"></i>Subjects</a>
+                            <a href="{% url 'strtfeed' %}">
+                                <i class="far fa-check-square"></i>Start Feedback</a>
                         </li>
                         <li>
-                            <a href="{% url 'uploadnotes' %}">
-                                <i class="fa fa-upload"></i>Upload Notes</a>
+                        <a class="js-arrow" href="#">
+                                <i class="fas fa-chart-bar"></i>Get Started</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="{% url 'addsub' %}">Add Subject</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="{% url 'allotsub' %}">Subject Allotment</a>
+                                </li>
+                            </ul>
                         </li>
-                        
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Activities</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="{% url 'viewfac' %}">View All Faculties</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewstd' %}">View All Students</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewsub' %}">View All Subjects</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewalmt' %}">View All Allotments</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>Feedback</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="{% url 'viewfeed' %}">View Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'subwisefeed' %}">Subject-Wise Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'facwisefeed' %}">Faculty-Wise Feedback</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -390,14 +431,54 @@ body {
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{% url 'faclogin' %}">
-                                <i class="fas fa-chart-bar"></i>Subjects</a>
+                            <a href="{% url 'strtfeed' %}">
+                                <i class="far fa-check-square"></i>Start Feedback</a>
                         </li>
-                        <li>
-                            <a href="{% url 'uploadnotes' %}">
-                                <i class="fa fa-upload"></i>Upload Notes</a>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-chart-bar"></i>Get Connected</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="{% url 'addsub' %}">Add Subject</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'allotsub' %}">Subject Allotment</a>
+                                </li>
+                            </ul>
                         </li>
-                        
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Activities</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="{% url 'viewfac' %}">View All Faculties</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewstd' %}">View All Students</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewsub' %}">View All Subjects</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'viewalmt' %}">View All Allotments</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>Feedback</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="{% url 'viewfeed' %}">View Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'subwisefeed' %}">Subject-Wise Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'facwisefeed' %}">Faculty-Wise Feedback</a>
+                                </li>                        
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -537,9 +618,9 @@ body {
                                         </div>
                                         <div class="content">
                                         {% if user.code %}
-                                            <a class="js-acc-btn" href="#">{{user.code}}</a>
+                                            <a class="js-acc-btn" href="#">Admin</a>
                                         {% else %}
-                                            <a class="js-acc-btn" href="#">{{user.name}}</a>
+                                            <a class="js-acc-btn" href="#">Admin</a>
                                         {% endif %}
                                         </div>
                                         <div class="account-dropdown js-dropdown">
@@ -552,11 +633,11 @@ body {
                                                 <div class="content">
 {% if user.code %}
                                             <h5 class="name">
-                                                        <a href="#">{{user.code}}</a>
+                                                        <a href="#">Admin</a>
                                                     </h5>
                                         {% else %}
                                             <h5 class="name">
-                                                        <a href="#">{{user.name}}</a>
+                                                        <a href="#">Admin</a>
                                                     </h5>
                                         {% endif %}
 
@@ -565,17 +646,10 @@ body {
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="{% url 'facviewprofile' %}">
-                                                        <i class="zmdi zmdi-account"></i>Profile</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="{% url 'facupdateprofile' %}">
-                                                        <i class="zmdi zmdi-settings"></i>Update Profile</a>
-                                                </div>
+                                                
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="{% url 'faclogout' %}">
+                                                <a href="{% url 'alogout' %}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
@@ -595,7 +669,7 @@ body {
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Select Branch Semester</h2>
+                                                                        <h2 class="title-1">Select Branch Semester</h2>
                                     
                                 </div>
                             </div>
