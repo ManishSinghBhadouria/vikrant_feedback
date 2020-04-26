@@ -33,7 +33,6 @@
 
     <!-- Main CSS-->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet" media="all">
-<<<<<<< HEAD
 
 
     <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
@@ -47,42 +46,6 @@
 <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
 
 
-=======
-<style>
-#customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
-#myDIV {
-  width: 300px;
-  height: 40px;
-  background: #4CAF50;
-  animation: mymove 3s infinite;
-}
-
-@keyframes mymove {
-  50% {background-color: grey;}
-}
-</style>
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
 </head>
 
@@ -122,11 +85,6 @@
                                 <li>
                                     <a href="{% url 'addsub' %}">Add Subject</a>
                                 </li>
-<<<<<<< HEAD
-
-=======
-                                
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                 <li>
                                     <a href="{% url 'allotsub' %}">Subject Allotment</a>
                                 </li>
@@ -231,11 +189,7 @@
                                 </li>
                                 <li>
                                     <a href="{% url 'facwisefeed' %}">Faculty-Wise Feedback</a>
-<<<<<<< HEAD
                                 </li>
-=======
-                                </li>                        
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                             </ul>
                         </li>
                     </ul>
@@ -369,11 +323,7 @@
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
                                 </div>
-=======
-                                </div>            
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -404,11 +354,6 @@
                                                     </h5>
                                         {% endif %}
 
-<<<<<<< HEAD
-
-=======
-                                                    
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
                                                     <span class="email">{{user.email}}</span>
                                                 </div>
                                             </div>
@@ -437,7 +382,6 @@
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
-<<<<<<< HEAD
           <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
@@ -451,26 +395,6 @@
 <h2 class="title">All Feedback's</h2>
 </div>
  <table id="customers" style="width:100%" border="5">
-=======
-            <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap">
-                                    <h2 class="title-1">Feedback</h2>
-                                    
-                                </div>
-                            </div>
-                        </div>
-    
-
-<center>
-
-            <div id="myDIV"><center><h1>All Feedback</h1></center></div>
-            </center>
-<table id="customers" style="width:100%" border="5">
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
   <tr>
       <th><h4><b><i>Programme</h4></th>
       <th><h4><b><i>Branch</h4></th>
@@ -486,7 +410,6 @@
       <th><h4><b><i>Overall</h4></th>
   </tr>
     {% for record in allrecord %}
-<<<<<<< HEAD
 
      <tr>
     <td><center>{{ record.programme }}</center></td>
@@ -501,21 +424,6 @@
       <td><center>{{ record.ques4 }}</center></td>
       <td><center>{{ record.ques5 }}</center></td>
       <td><center>{{ record.overall }}</center></td>
-=======
-  <tr>
-    <td>{{ record.programme }}</td>
-      <td>{{ record.branch }}</td>
-    <td>{{ record.sem }}</td>
-    <td>{{ record.stdid }}</td>
-      <td>{{ record.sname }}</td>
-      <td>{{ record.currentdate }}</td>
-      <td>{{ record.ques1 }}</td>
-    <td>{{ record.ques2}}</td>
-    <td>{{ record.ques3 }}</td>
-      <td>{{ record.ques4 }}</td>
-      <td>{{ record.ques5 }}</td>
-      <td>{{ record.overall }}</td>
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
     </tr>
     {% endfor %}
 </table>
@@ -524,7 +432,6 @@
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -532,16 +439,6 @@
 
 
 
-=======
-                  
-                        <div class="row">
-                            <div class="col-md-12">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
@@ -549,12 +446,9 @@
 
     </div>
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
     <!-- Jquery JS-->
     <script src="{% static 'vendor/jquery-3.2.1.min.js' %}"></script>
     <!-- Bootstrap JS-->
@@ -573,7 +467,6 @@
     <script src="{% static 'vendor/circle-progress/circle-progress.min.js' %}"></script>
     <script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
     <script src="{% static 'vendor/chartjs/Chart.bundle.min.js' %}"></script>
-<<<<<<< HEAD
     <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
 
 
@@ -595,10 +488,6 @@
 </script>
 <script src="{% static 'https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js' %}" data-cf-settings="fd5bfc2506e31fdc2e8f6eb0-|49" defer=""></script>
 
-=======
-    <script src="{% static 'vendor/select2/select2.min.js' %}">
-    </script>
->>>>>>> 0dd0e3b21922737513deef862237cc0fd192f1ec
 
     <!-- Main JS-->
     <script src="{% static 'js/main.js' %}"></script>

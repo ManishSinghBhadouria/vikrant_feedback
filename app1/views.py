@@ -501,6 +501,9 @@ def index(request):
 def about(request):
     return  render (request,'about.html')
 
+
+
+
 def course(request):
     return  render (request,'course.html')
 
