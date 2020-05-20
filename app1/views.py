@@ -12,6 +12,8 @@ import requests
 from django.contrib.sessions.models import Session
 from django.core.files.storage import FileSystemStorage
 
+from rest_framework import viewsets
+from .serializer import notesSerializer, startfeedbackSerializer,feedbackregSerializer,subjectallotmentSerializer,subjectSerializer,stdprofileSerializer,registrationSerializer,facprofileSerializer
 
 
 
@@ -781,3 +783,36 @@ def subdelete(request,id):
     subject.objects.filter(id=id).delete()
     return redirect("login")
 
+#RESTAPI
+
+class  stdprofileViewSet(viewsets.ModelViewSet):
+    queryset = stdprofile.objects.all().order_by('-id')
+    serializer_class = stdprofileSerializer
+
+class  facprofileViewSet(viewsets.ModelViewSet):
+    queryset = facprofile.objects.all().order_by('-id')
+    serializer_class = facprofileSerializer
+
+class  registrationViewSet(viewsets.ModelViewSet):
+    queryset = registration.objects.all().order_by('-id')
+    serializer_class = registrationSerializer
+
+class  notesViewSet(viewsets.ModelViewSet):
+    queryset = notes.objects.all().order_by('-id')
+    serializer_class = notesSerializer
+
+class  startfeedbackViewSet(viewsets.ModelViewSet):
+    queryset = startfeedback.objects.all().order_by('-id')
+    serializer_class = startfeedbackSerializer
+
+class  feedbackregViewSet(viewsets.ModelViewSet):
+    queryset = feedbackreg.objects.all().order_by('-id')
+    serializer_class = feedbackregSerializer
+
+class  subjectallotmentViewSet(viewsets.ModelViewSet):
+    queryset = subjectallotment.objects.all().order_by('-id')
+    serializer_class = subjectallotmentSerializer
+
+class  subjectViewSet(viewsets.ModelViewSet):
+    queryset = subject.objects.all().order_by('-id')
+    serializer_class = subjectSerializer

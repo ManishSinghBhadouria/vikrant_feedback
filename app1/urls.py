@@ -2,7 +2,35 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from rest_framework import routers
+from rest_framework_jwt.views import obtain_jwt_token
+
+
+router = routers.DefaultRouter() 
+router.register(r'notes', views.notesViewSet)
+router.register(r'registration', views.registrationViewSet)
+router.register(r'facprofile', views.facprofileViewSet)
+router.register(r'stdprofile', views.stdprofileViewSet)
+router.register(r'subject', views.subjectViewSet)
+router.register(r'subjectallotment', views.subjectallotmentViewSet)
+router.register(r'startfeedback', views.startfeedbackViewSet)
+router.register(r'feedbackreg', views.feedbackregViewSet)
+
+
 urlpatterns = [
+#RESTAPI
+
+    path(r'api/', include(router.urls)),
+    path(r'api-token-auth', obtain_jwt_token),
+
+
+
+
+
+
+
+
+
     path('',views.index,name='index'),
     path('about',views.about,name='about'),
     path('contact',views.contact,name='contact'),

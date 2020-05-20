@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,20 @@ EMAIL_HOST_USER= 'vikrantgroupofinstitutionsgwal@gmail.com'
 EMAIL_HOST_PASSWORD='vikrant1234'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',    
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+        
+    ],
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'PAGE_SIZE': 2
+}
+
+
